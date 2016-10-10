@@ -1,0 +1,18 @@
+import expect from 'expect';
+import * as courseActions from './courseActions';
+import * as types from './actionTypes';
+
+describe('Course actions', ()=>{
+    describe('createCourseSuccess', ()=>{
+       const course = {id: 'clean-code', title: 'Clean Code'};
+       const expectedAction = {
+           type: types.CREATE_COURSE_SUCCESS,
+           course: course,
+       };
+
+       const action = courseActions.createCourseSuccess(course);
+
+        expect(action).toEqual(expectedAction);
+
+    });
+});
